@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ARTHEMIS TECH & SECURITY</title>
+
+    <style>
+
+        /* =========================
+           ESTILO GENERAL
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background-color: #080808;
+            color: white;
+        }
+
+
+        /* =========================
+           ENCABEZADO
+        ========================= */
+
+        header {
+            background-color: #050505;
+            padding: 25px 20px;
+            text-align: center;
+            border-bottom: 2px solid #8b2de2;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 180px;
+            max-width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.03);
+        }
+
+
+        /* =========================
+           NAVEGACIÓN
+        ========================= */
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #c084fc;
+        }
+
+
+        /* =========================
+           INICIO
+        ========================= */
+
+        .inicio {
+            text-align: center;
+            padding: 130px 20px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    #351052,
+                    #080808 70%
+                );
+
+            min-height: 600px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inicio h2 {
+            max-width: 900px;
+            margin: 0 auto 25px;
+
+            font-size: clamp(40px, 6vw, 70px);
+
+            color: #c084fc;
+
+            letter-spacing: 2px;
+
+            text-shadow:
+                0 0 15px rgba(168, 85, 247, 0.4);
+        }
+
+        .inicio p {
+            max-width: 800px;
+
+            font-size: 20px;
+            line-height: 1.6;
+
+            color: #ddd;
+        }
+
+
+        /* =========================
+           BOTONES
+        ========================= */
+
+        .boton {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 15px 30px;
+
+            background: linear-gradient(
+                135deg,
+                #6b21a8,
+                #a855f7
+            );
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 0 25px rgba(168, 85, 247, 0.5);
+        }
+
+
+        /* =========================
+           SECCIONES
+        ========================= */
+
+        section {
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #b45cff;
+            font-size: 40px;
+            letter-spacing: 2px;
+
+            margin-bottom: 40px;
+        }
+
+
+        /* =========================
+           PRODUCTOS
+        ========================= */
+
+        #productos {
+            background-color: #080808;
+        }
+
+        .subtitulo-productos {
+            max-width: 800px;
+
+            margin: -20px auto 50px;
+
+            color: #cfcfcf;
+
+            font-size: 18px;
+
+            line-height: 1.6;
+        }
+
+        .productos-grid {
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 30px;
+        }
+
+        .producto-card {
+            padding: 35px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #18121f,
+                    #090909
+                );
+
+            border: 1px solid #4c1d72;
+
+            border-radius: 18px;
+
+            text-align: left;
+
+            transition: 0.4s;
+
+            box-shadow:
+                0 0 20px rgba(
+                    110,
+                    40,
+                    160,
+                    0.08
+                );
+        }
+
+        .producto-card:hover {
+            transform: translateY(-10px);
+
+            border-color: #b45cff;
+
+            box-shadow:
+                0 0 30px rgba(
+                    168,
+                    85,
+                    247,
+                    0.25
+                );
+        }
+
+        .producto-icono {
+            font-size: 50px;
+
+            margin-bottom: 15px;
+        }
+
+        .producto-card h3 {
+            color: white;
+
+            font-size: 34px;
+
+            margin: 0 0 8px;
+        }
+
+        .producto-card h3 span {
+            color: #b45cff;
+        }
+
+        .producto-card h4 {
+            color: #d8a7ff;
+
+            font-size: 18px;
+
+            margin-bottom: 20px;
+        }
+
+        .producto-card p {
+            color: #c8c8c8;
+
+            line-height: 1.7;
+
+            margin-bottom: 20px;
+        }
+
+        .producto-card ul {
+            list-style: none;
+
+            padding: 0;
+
+            margin-bottom: 25px;
+        }
+
+        .producto-card li {
+            color: #ddd;
+
+            margin: 10px 0;
+        }
+
+        .producto-precio {
+            color: #c084fc;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            padding-top: 20px;
+
+            border-top:
+                1px solid #3b1855;
+        }
+
+        .producto-boton {
+            display: block;
+
+            margin-top: 20px;
+
+            padding: 14px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #6b21a8,
+                    #a855f7
+                );
+
+            border-radius: 8px;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .producto-boton:hover {
+            transform: scale(1.03);
+
+            box-shadow:
+                0 0 20px rgba(
+                    168,
+                    85,
+                    247,
+                    0.5
+                );
+        }
+
+
+        /* =========================
+           SOBRE NOSOTROS
+        ========================= */
+
+        #nosotros {
+            background:
+                linear-gradient(
+                    180deg,
+                    #080808,
+                    #110b17
+                );
+        }
+
+        #nosotros p {
+            max-width: 900px;
+
+            margin: 20px auto;
+
+            color: #d0d0d0;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+        }
+
+        #nosotros h3 {
+            color: #c084fc;
+
+            font-size: 26px;
+
+            margin-top: 40px;
+        }
+
+
+        /* =========================
+           CONTACTO
+        ========================= */
+
+        .contacto {
+            background-color: #0d0d0d;
+        }
+
+        .contacto > p {
+            color: #d0d0d0;
+
+            font-size: 18px;
+        }
+
+        .botones-contacto {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+
+            margin-top: 25px;
+        }
+
+        .whatsapp {
+            background: #25D366;
+        }
+
+        .whatsapp:hover {
+            background: #1ebe5d;
+
+            box-shadow:
+                0 0 25px rgba(
+                    37,
+                    211,
+                    102,
+                    0.4
+                );
+        }
+
+        .instagram {
+            background:
+                linear-gradient(
+                    135deg,
+                    #6b21a8,
+                    #a855f7,
+                    #ec4899
+                );
+        }
+
+        .instagram:hover {
+            box-shadow:
+                0 0 25px rgba(
+                    168,
+                    85,
+                    247,
+                    0.5
+                );
+        }
+
+        .horario {
+            margin-top: 40px;
+
+            color: #c084fc !important;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           PIE DE PÁGINA
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 45px 20px;
+
+            background-color: #050505;
+
+            border-top:
+                1px solid #6b21a8;
+        }
+
+        footer h3 {
+            color: #c084fc;
+
+            font-size: 24px;
+        }
+
+        footer p {
+            color: #aaa;
+
+            margin: 10px;
+        }
+
+
+        /* =========================
+           RESPONSIVE - CELULAR
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            header {
+                padding: 20px 10px;
+            }
+
+            .logo {
+                width: 150px;
+            }
+
+            nav {
+                display: flex;
+
+                justify-content: center;
+
+                flex-wrap: wrap;
+
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 5px;
+
+                font-size: 15px;
+            }
+
+            .inicio {
+                padding: 100px 20px;
+
+                min-height: 500px;
+            }
+
+            .inicio h2 {
+                font-size: 40px;
+            }
+
+            .inicio p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 70px 15px;
+            }
+
+            section h2 {
+                font-size: 32px;
+            }
+
+            .productos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .producto-card {
+                padding: 25px;
+            }
+
+            .producto-card h3 {
+                font-size: 30px;
+            }
+
+            .botones-contacto {
+                flex-direction: column;
+            }
+
+            .botones-contacto .boton {
+                width: 90%;
+                max-width: 350px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================= -->
+
+    <header>
+
+        <img
+            src="logo.jpg.jpeg"
+            alt="ARTHEMIS TECH & SECURITY"
+            class="logo">
+
+       <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+    </header>
+
+
+    <!-- =========================
+         INICIO
+    ========================= -->
+
+    <section
+        id="inicio"
+        class="inicio">
+
+        <h2>
+            EL FUTURO SEGURO
+            <br>
+            COMIENZA HOY
+        </h2>
+
+        <p>
+            Soluciones tecnológicas inteligentes
+            para la seguridad, identificación
+            y control de acceso.
+        </p>
+
+        <a
+            class="boton"
+            href="https://wa.me/573332790191"
+            target="_blank">
+
+            📱 CONTACTAR POR WHATSAPP
+
+        </a>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTOS
+    ========================= -->
+
+    <section id="productos">
+
+        <h2>NUESTROS PRODUCTOS</h2>
+
+        <p class="subtitulo-productos">
+
+            Soluciones tecnológicas inteligentes
+            para la seguridad, identificación
+            y control de acceso.
+
+        </p>
+
+
+        <div class="productos-grid">
+
+
+            <!-- SENID -->
+
+            <div class="producto-card">
+
+                <div class="producto-icono">
+                    📡
+                </div>
+
+                <h3>
+                    Sen<span>ID</span>
+                </h3>
+
+                <h4>
+                    Lector Inteligente RFID
+                </h4>
+
+                <p>
+
+                    SenID es el dispositivo encargado
+                    de leer las tarjetas RFID cuando
+                    el usuario las acerca a un punto
+                    de acceso.
+
+                </p>
+
+                <ul>
+
+                    <li>
+                        ✓ Lectura rápida y precisa
+                    </li>
+
+                    <li>
+                        ✓ Compatible con tarjetas RFID
+                    </li>
+
+                    <li>
+                        ✓ Registro de accesos
+                    </li>
+
+                    <li>
+                        ✓ Fácil instalación
+                    </li>
+
+                </ul>
+
+                <div class="producto-precio">
+
+                    Precio por cotización
+
+                </div>
+
+                <a
+                    href="https://wa.me/573332790191?text=Hola%20ARTHEMIS%2C%20quiero%20información%20sobre%20SenID"
+                    target="_blank"
+                    class="producto-boton">
+
+                    📱 COTIZAR POR WHATSAPP
+
+                </a>
+
+            </div>
+
+
+            <!-- SENHUB -->
+
+            <div class="producto-card">
+
+                <div class="producto-icono">
+                    🖥️
+                </div>
+
+                <h3>
+                    Sen<span>Hub</span>
+                </h3>
+
+                <h4>
+                    Plataforma Central de Administración
+                </h4>
+
+                <p>
+
+                    SenHub es la plataforma que permite
+                    administrar y supervisar todo el
+                    sistema de seguridad desde un solo lugar.
+
+                </p>
+
+                <ul>
+
+                    <li>
+                        ✓ Gestión de usuarios
+                    </li>
+
+                    <li>
+                        ✓ Administración de tarjetas RFID
+                    </li>
+
+                    <li>
+                        ✓ Control de permisos y áreas
+                    </li>
+
+                    <li>
+                        ✓ Reportes y alertas
+                    </li>
+
+                </ul>
+
+                <div class="producto-precio">
+
+                    Precio por cotización
+
+                </div>
+
+                <a
+                    href="https://wa.me/573332790191?text=Hola%20ARTHEMIS%2C%20quiero%20información%20sobre%20SenHub"
+                    target="_blank"
+                    class="producto-boton">
+
+                    📱 COTIZAR POR WHATSAPP
+
+                </a>
+
+            </div>
+
+
+            <!-- SENLOCK -->
+
+            <div class="producto-card">
+
+                <div class="producto-icono">
+                    🔐
+                </div>
+
+                <h3>
+                    Sen<span>LOCK</span>
+                </h3>
+
+                <h4>
+                    Sistema Inteligente para Lockers
+                </h4>
+
+                <p>
+
+                    SenLOCK es el sistema diseñado
+                    para proteger los lockers mediante
+                    la tarjeta RFID institucional.
+
+                </p>
+
+                <ul>
+
+                    <li>
+                        ✓ Locker asignado por estudiante
+                    </li>
+
+                    <li>
+                        ✓ Acceso mediante RFID
+                    </li>
+
+                    <li>
+                        ✓ Registro de aperturas
+                    </li>
+
+                    <li>
+                        ✓ Historial de uso
+                    </li>
+
+                </ul>
+
+                <div class="producto-precio">
+
+                    Precio por cotización
+
+                </div>
+
+                <a
+                    href="https://wa.me/573332790191?text=Hola%20ARTHEMIS%2C%20quiero%20información%20sobre%20SenLOCK"
+                    target="_blank"
+                    class="producto-boton">
+
+                    📱 COTIZAR POR WHATSAPP
+
+                </a>
+
+            </div>
+
+
+            <!-- SENPASS -->
+
+            <div class="producto-card">
+
+                <div class="producto-icono">
+                    🚪
+                </div>
+
+                <h3>
+                    Sen<span>PASS</span>
+                </h3>
+
+                <h4>
+                    Sistema de Control de Acceso
+                </h4>
+
+                <p>
+
+                    SenPASS es el sistema encargado
+                    de gestionar y controlar los accesos
+                    de las personas dentro de la institución.
+
+                </p>
+
+                <ul>
+
+                    <li>
+                        ✓ Verificación de identidad
+                    </li>
+
+                    <li>
+                        ✓ Control de permisos
+                    </li>
+
+                    <li>
+                        ✓ Registro de entradas y salidas
+                    </li>
+
+                    <li>
+                        ✓ Integración con SenID y SenHub
+                    </li>
+
+                </ul>
+
+                <div class="producto-precio">
+
+                    Precio por cotización
+
+                </div>
+
+                <a
+                    href="https://wa.me/573332790191?text=Hola%20ARTHEMIS%2C%20quiero%20información%20sobre%20SenPASS"
+                    target="_blank"
+                    class="producto-boton">
+
+                    📱 COTIZAR POR WHATSAPP
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SOBRE NOSOTROS
+    ========================= -->
+
+    <section id="nosotros">
+
+        <h2>SOBRE NOSOTROS</h2>
+
+        <p>
+
+            <strong>
+                ARTHEMIS TECH & SECURITY
+            </strong>
+
+            es una empresa dedicada al desarrollo
+            de soluciones tecnológicas enfocadas
+            en la seguridad, identificación y control
+            de acceso dentro de las instituciones educativas.
+
+        </p>
+
+        <p>
+
+            Nuestra propuesta nace con el propósito
+            de brindar una alternativa moderna y organizada
+            para gestionar el ingreso de estudiantes,
+            docentes y personal institucional.
+
+        </p>
+
+        <h3>
+            💜 Nuestra propuesta
+        </h3>
+
+        <p>
+
+            No buscamos ofrecer únicamente dispositivos
+            independientes. Nuestro objetivo es desarrollar
+            un sistema integral en el que cada componente
+            cumpla una función específica y todos trabajen
+            de manera conectada.
+
+        </p>
+
+        <p>
+
+            Buscamos combinar tecnología, seguridad,
+            innovación y facilidad de uso, creando soluciones
+            que puedan adaptarse a las necesidades
+            de cada institución.
+
+        </p>
+
+        <h3>
+            “El futuro seguro comienza hoy.”
+        </h3>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================= -->
+
+    <section
+        id="contacto"
+        class="contacto">
+
+        <h2>
+            CONTACTO
+        </h2>
+
+        <p>
+
+            ¿Quieres conocer más sobre
+            ARTHEMIS TECH & SECURITY?
+
+        </p>
+
+        <p>
+
+            Estamos disponibles para atender
+            tus preguntas.
+
+        </p>
+
+<!-- GALERÍA -->
+<section id="galeria" class="galeria">
+
+    <h2>GALERÍA</h2>
+
+    <p class="subtitulo-galeria">
+        Conoce nuestras soluciones tecnológicas de seguridad.
+    </p>
+
+    <div class="galeria-grid">
+
+        <div class="galeria-card">
+            <div class="galeria-icono">📡</div>
+            <h3>SenID</h3>
+            <p>Lector inteligente de identificación RFID.</p>
+            <span>Imagen próximamente</span>
+        </div>
+
+        <div class="galeria-card">
+            <div class="galeria-icono">🖥️</div>
+            <h3>SenHub</h3>
+            <p>Plataforma central de administración.</p>
+            <span>Imagen próximamente</span>
+        </div>
+
+        <div class="galeria-card">
+            <div class="galeria-icono">🔐</div>
+            <h3>SenLOCK</h3>
+            <p>Sistema inteligente de seguridad para lockers.</p>
+            <span>Imagen próximamente</span>
+        </div>
+
+        <div class="galeria-card">
+            <div class="galeria-icono">🚪</div>
+            <h3>SenPASS</h3>
+            <p>Sistema de control de acceso institucional.</p>
+            <span>Imagen próximamente</span>
+        </div>
+
+    </div>
+
+</section>
+
+        <div class="botones-contacto">
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                class="boton whatsapp"
+                href="https://wa.me/573332790191"
+                target="_blank">
+
+                📱 ESCRIBIR POR WHATSAPP
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+                class="boton instagram"
+                href="https://www.instagram.com/arthemis_tech_y_security/"
+                target="_blank">
+
+                📸 VISITAR INSTAGRAM
+
+            </a>
+
+        </div>
+
+
+       <p class="horario">
+    🕐 Horario de atención: Lunes a viernes, de 8:00 a. m. a 6:00 p. m.
+</p>
+    </section>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================= -->
+
+    <footer>
+
+        <h3>
+            ARTHEMIS TECH & SECURITY
+        </h3>
+
+        <p>
+            EL FUTURO SEGURO COMIENZA HOY
+        </p>
+
+        <p>
+            © 2026 ARTHEMIS TECH & SECURITY
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

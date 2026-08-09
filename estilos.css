@@ -1,0 +1,639 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #070707;
+    color: white;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(5, 5, 5, 0.96);
+    border-bottom: 1px solid #6b21a8;
+
+    padding: 15px 20px;
+    text-align: center;
+}
+
+/* LOGO */
+
+.logo {
+    display: block;
+    width: 170px;
+    height: auto;
+    margin: 0 auto 10px;
+    object-fit: contain;
+}
+
+/* MENÚ */
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c084fc;
+}
+
+
+/* =========================
+   INICIO
+========================= */
+
+.inicio {
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #42145f 0%,
+            #190b25 35%,
+            #070707 75%
+        );
+}
+
+.inicio h2 {
+    max-width: 900px;
+
+    font-size: clamp(35px, 6vw, 65px);
+
+    color: #d8a7ff;
+
+    text-shadow:
+        0 0 10px #8b2de2,
+        0 0 30px #6b21a8;
+}
+
+.inicio p {
+    max-width: 700px;
+
+    margin-top: 25px;
+
+    color: #ddd;
+    font-size: 20px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 15px 30px;
+
+    background: linear-gradient(
+        135deg,
+        #6b21a8,
+        #a855f7
+    );
+
+    border: 1px solid #c084fc;
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 15px #8b2de2,
+        0 0 35px #6b21a8;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+section {
+    padding: 100px 25px;
+    text-align: center;
+}
+
+section > h2 {
+    color: #c084fc;
+    font-size: 40px;
+    margin-bottom: 50px;
+
+    text-shadow: 0 0 15px #6b21a8;
+}
+
+
+/* =========================
+   PRODUCTOS
+========================= */
+
+#productos {
+    padding: 100px 30px;
+    background: #070707;
+}
+
+.subtitulo-productos {
+    max-width: 800px;
+
+    margin: -25px auto 50px;
+
+    color: #bdbdbd;
+    font-size: 18px;
+    text-align: center;
+}
+
+.productos-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.producto-card {
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #18121f,
+            #090909
+        );
+
+    border: 1px solid #4c1d72;
+    border-radius: 18px;
+
+    text-align: left;
+
+    transition: 0.4s;
+
+    box-shadow:
+        0 0 20px rgba(110, 40, 160, 0.08);
+}
+
+.producto-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #b45cff;
+
+    box-shadow:
+        0 0 30px rgba(168, 85, 247, 0.25);
+}
+
+.producto-icono {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.producto-card h3 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.producto-card h3 span {
+    color: #b45cff;
+}
+
+.producto-card h4 {
+    color: #d8a7ff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.producto-card p {
+    color: #c8c8c8;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.producto-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.producto-card li {
+    color: #ddd;
+    margin: 10px 0;
+}
+
+.producto-precio {
+    color: #c084fc;
+    font-size: 18px;
+    font-weight: bold;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #3b1855;
+}
+
+.producto-boton {
+    display: block;
+
+    margin-top: 20px;
+    padding: 14px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #6b21a8,
+        #a855f7
+    );
+
+    border-radius: 8px;
+
+    color: white;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.producto-boton:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+
+/* =========================
+   SOBRE NOSOTROS
+========================= */
+
+#nosotros {
+    background:
+        linear-gradient(
+            180deg,
+            #070707,
+            #120a19
+        );
+}
+
+#nosotros p {
+    max-width: 900px;
+
+    margin: 0 auto 20px;
+
+    color: #ccc;
+
+    font-size: 17px;
+}
+
+#nosotros h3 {
+    color: #c084fc;
+
+    margin: 30px 0 15px;
+
+    font-size: 25px;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+    background: #0c0c0c;
+}
+
+.contacto p {
+    margin: 15px;
+
+    color: #ccc;
+
+    font-size: 18px;
+}
+
+.botones-contacto {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp {
+    background: #25D366;
+    border-color: #25D366;
+}
+
+.whatsapp:hover {
+    background: #1ebe5d;
+
+    box-shadow:
+        0 0 25px rgba(37, 211, 102, 0.5);
+}
+
+
+/* INSTAGRAM */
+
+.instagram {
+    background:
+        linear-gradient(
+            135deg,
+            #6b21a8,
+            #a855f7,
+            #ec4899
+        );
+
+    border-color: #c084fc;
+}
+
+.instagram:hover {
+    box-shadow:
+        0 0 25px rgba(168, 85, 247, 0.5);
+}
+
+.horario {
+    margin-top: 35px;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    background: #030303;
+
+    border-top: 1px solid #6b21a8;
+}
+
+footer h3 {
+    color: #b45cff;
+
+    letter-spacing: 3px;
+}
+
+footer p {
+    color: #888;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 12px 10px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+
+    nav a {
+        display: inline-block;
+
+        margin: 7px;
+
+        font-size: 14px;
+    }
+
+    .inicio {
+        min-height: 80vh;
+        padding: 50px 15px;
+    }
+
+    .inicio h2 {
+        font-size: 38px;
+    }
+
+    .inicio p {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 70px 15px;
+    }
+
+    section > h2 {
+        font-size: 32px;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #productos {
+        padding: 70px 15px;
+    }
+
+    .producto-card {
+        padding: 25px;
+    }
+
+    .producto-card h3 {
+        font-size: 27px;
+    }
+
+    .botones-contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botones-contacto .boton {
+        width: 90%;
+        max-width: 350px;
+    }
+    /* =========================
+   TIPOGRAFÍA FUTURISTA
+========================= */
+
+header,
+.inicio h2,
+section h2,
+.producto-card h3,
+.producto-card h4,
+footer h3,
+.boton,
+nav a {
+    font-family: "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+}
+
+.inicio h2,
+section h2,
+.producto-card h3,
+header h1 {
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+nav a {
+    letter-spacing: 1px;
+}
+
+.producto-card h3 {
+    text-transform: uppercase;
+}
+/* =========================
+   IMÁGENES DE PRODUCTOS
+========================= */
+
+.producto-imagen {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #6b21a8;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
+    transition: 0.4s;
+}
+
+.producto-card:hover .producto-imagen {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.3);
+}
+/* =========================
+   GALERÍA
+========================= */
+
+.galeria {
+    background:
+        linear-gradient(
+            180deg,
+            #0b0b0b,
+            #160b20
+        );
+}
+
+.subtitulo-galeria {
+    max-width: 700px;
+    margin: -25px auto 50px;
+    color: #bdbdbd;
+    font-size: 18px;
+}
+
+.galeria-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.galeria-card {
+    padding: 40px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #18121f,
+            #090909
+        );
+
+    border: 1px solid #4c1d72;
+    border-radius: 18px;
+
+    text-align: center;
+
+    transition: 0.4s;
+}
+
+.galeria-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #b45cff;
+
+    box-shadow:
+        0 0 30px rgba(168, 85, 247, 0.25);
+}
+
+.galeria-icono {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.galeria-card h3 {
+    color: #c084fc;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.galeria-card p {
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.galeria-card span {
+    display: inline-block;
+
+    padding: 7px 15px;
+
+    border: 1px solid #6b21a8;
+    border-radius: 20px;
+
+    color: #b45cff;
+    font-size: 13px;
+}
+
+
+/* GALERÍA EN CELULAR */
+
+@media (max-width: 800px) {
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+}
